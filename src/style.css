@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  background: url('./image/fon1.jpg') no-repeat;
+  background-size: 100%;
+  object-fit: cover;
+}
+
+.slides {
+  padding-top: 5%;
+  margin-bottom: 10px;
+  height: 630px;
+}
+
+.slideView {
+  width: 50%;
+  background-color: #fff;
+  margin: 0 auto;
+  display: none;
+  border: 15px solid #000;
+  border-radius: 5px;
+  box-shadow: 0px 26px 13px 0px rgba(148, 148, 148, 0.37);
+  transform: scale(0);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+.active {
+  display: flex;
+  transform: scale(1);
+  opacity: 1;
+  animation: anim 1s ease-in-out;
+}
+
+@keyframes anim {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button {
+  background-image: linear-gradient(top, #f4f1ee, #fff);
+  border-radius: 50%;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204, 198, 197, 0.5);
+  height: 70px;
+  width: 70px;
+  margin: 10px;
+  position: relative;
+  transition: all 0.3s linear;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 200ms;
+}
+
+.buttonHidden {
+  display: none;
+}
+
+.button:after {
+  color: #e9e6e4;
+  content: '';
+  display: block;
+  height: 30px;
+  text-decoration: none;
+  text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;
+  position: absolute;
+  width: 30px;
+}
+
+.button:hover {
+  background-image: linear-gradient(top, #fff, #f4f1ee);
+  color: #0088cc;
+}
+
+.heart:hover:after {
+  color: #f94e66;
+  text-shadow: 0px 0px 6px #f94e66;
+}
+
+.button:active {
+  background-image: linear-gradient(top, #efedec, #f7f4f4);
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.4), inset 0px -3px 1px 1px rgba(204, 198, 197, 0.5);
+}
+
+.button:active:after {
+  color: #dbd2d2;
+  text-shadow: 0px -1px 1px #bdb5b4, 0px 1px 1px white;
+}
