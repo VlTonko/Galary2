@@ -7,5 +7,3 @@ elements.btnNext.addEventListener('click', firstClass.btnNextSlide);
 elements.btnPrew.addEventListener('click', firstClass.btnPrewSlide);
 elements.btnPlay.addEventListener('click', firstClass.runShow);
 elements.btnStop.addEventListener('click', firstClass.stopShow);
-
-export default firstClass;

@@ -5,7 +5,8 @@ class View {
   constructor() {
     this.btnNextSlide = this.btnNextSlide.bind(this);
     this.btnPrewSlide = this.btnPrewSlide.bind(this);
-    this.nextSlide = this.nextSlide.bind(this);
+    this.runShow = this.runShow.bind(this);
+    this.stopShow = this.stopShow.bind(this);
     this.time = 4000;
   }
 
@@ -23,6 +24,9 @@ class View {
 
   runShow() {
     elements.btnPlay.classList.add('buttonHidden');
+    console.log(this);
+    console.log(this.nextSlide);
+
     interval = setInterval(this.nextSlide, this.time);
     elements.btnStop.classList.remove('buttonHidden');
   }
